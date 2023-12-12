@@ -16,4 +16,13 @@
 
 */
 
-const number = prompt("Adivinhe o número que estou pensando entre 0 e 10.");
+let number = prompt("Adivinhe o número que estou pensando entre 0 e 10.");
+let random = Math.round(Math.random() * 10); 
+let attempts = 1;
+
+while(Number(number) !== random) {
+    number = prompt("Erro, tente novamente");
+    attempts ++;
+}
+
+alert("Parabéns! Você acertou em " + attempts + " tentativas.");
